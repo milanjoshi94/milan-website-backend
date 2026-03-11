@@ -5,7 +5,11 @@ const cors = require('cors');
 const paymentRoutes = require('./routes/paymentRoutes'); // Import
 
 const app = express();
-app.use(express.json());
+app.use(express.json({
+  verify: (req, res, buf) => {
+    req.rawBody = buf.toString(); // We save the raw string here
+  }
+}));
 app.use(cors());
 
 // Connect Database

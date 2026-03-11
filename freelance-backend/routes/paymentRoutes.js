@@ -45,7 +45,7 @@ router.post('/api/webhook', async (req, res) => {
     }
 });
 
-router.post('/api/verify-purchase', async (req, res) => {
+router.post('/verify-purchase', async (req, res) => {
     const { email } = req.body;
 
     // Look for a successful purchase with this email
