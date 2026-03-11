@@ -5,6 +5,7 @@ const purchaseSchema = new mongoose.Schema({
   razorpay_order_id: String,
   razorpay_payment_id: String,
   amount: Number,
+  status: String,
   date: { type: Date, default: Date.now }
 });
 
