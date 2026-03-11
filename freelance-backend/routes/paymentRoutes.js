@@ -11,7 +11,7 @@ const rzp = new Razorpay({
 
 const crypto = require('crypto');
 
-router.post('/api/webhook', async (req, res) => {
+router.post('/webhook', async (req, res) => {
     // SECURITY: Verify the webhook actually came from Razorpay
     const secret = 'YOUR_WEBHOOK_SECRET'; // You set this in Razorpay dashboard
     const signature = req.headers['x-razorpay-signature'];
